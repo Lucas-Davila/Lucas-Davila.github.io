@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@font-face {
+    font-family: dancing;
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+nav{
+    color: #03e9f4;
+}
+nav a{
+    font-family: dancing;
+    font-size: 2em;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+header{
+    color: white;
+}
+
+footer{
+    color: white;
+}

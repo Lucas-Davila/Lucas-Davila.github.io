@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(195deg, rgba(2,0,36,1) 39%, rgba(9,100,121,1) 83%, rgba(0,212,255,1) 100%);
+}
+
+.container{
+    height: 80%;
+    width: 80%;
+    border: 2px solid rgba(9,100,121,1);
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content{
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+}
+.slide img{
+    height: 100%;
+    width: 100%;
+}
+
+.news{
+    height: 30%;
+    width: 100%;
+    background-color: rgba(9,100,121,1);
+    opacity: 50%;
+    position: absolute;
+    bottom: 0%;
+}
+.news h1{
+    text-align: center;
+}
+.news p{
+    text-align: center;
+}
+
+.bar{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+input{
+    display: none;
+}
+.btn_switch{
+    height: 25px;
+    width: 50px;
+    background-color: #DAE2DF;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 16px 1px rgb(0, 0, 0, 0.24);
+    cursor: pointer;
+    transition: .4s;
+    position: relative;
+}
+#radio0:checked ~ .bar > .btn_switch{
+    background-color: rgba(9,100,121,1);
+}
+.btn_switch::before{
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-color: #EDF3F1;
+    border-radius: 25px;
+    position: absolute;
+    box-shadow: 0px 4px 8px 1px rgb(0, 0, 0, 0.25);
+    transform: scale(1.1);
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+#radio0:checked ~ .bar > .btn_switch::before{
+    left: 25px;
+}
+.btn{
+    height: 25px;
+    width: 25px;
+    margin-left: 6px;
+    background-color: #DAE2DF;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 16px 1px rgb(0, 0, 0, 0.24);
+    cursor: pointer;
+    transition: .4s;
+}
+.btn:hover{
+    background-color: rgba(9,100,121,1);
+    transform: scale(1.5);
+}
+#radio1:checked ~ .bar > #btn1{
+    background-color: rgba(9,100,121,1);
+    transform: scaleX(1.5);
+}
+#radio2:checked ~ .bar > #btn2{
+    background-color: rgba(9,100,121,1);
+    transform: scaleX(1.5);
+}
+#radio3:checked ~ .bar > #btn3{
+    background-color: rgba(9,100,121,1);
+    transform: scaleX(1.5);
+}
+#radio4:checked ~ .bar > #btn4{
+    background-color: rgba(9,100,121,1);
+    transform: scaleX(1.5);
+}
+#radio5:checked ~ .bar > #btn5{
+    background-color: rgba(9,100,121,1);
+    transform: scaleX(1.5);
+}
+#radio0:checked ~ .s1{
+    animation-name: carousel;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#radio1:checked ~ .s1{
+    margin-left: 0%;
+}
+#radio2:checked ~ .s1{
+    margin-left: -20%;
+}
+#radio3:checked ~ .s1{
+    margin-left: -40%;
+}
+#radio4:checked ~ .s1{
+    margin-left: -60%;
+}
+#radio5:checked ~ .s1{
+    margin-left: -80%;
+}
+@keyframes carousel{
+    to{margin-left: 0%;}
+    from{margin-left: -80%;}
+}
+
